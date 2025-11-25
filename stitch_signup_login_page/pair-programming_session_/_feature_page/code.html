@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Code Me Baby - Pair-Programming Session</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df2df",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#102321",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-[#102321] dark group/design-root overflow-x-hidden">
+<!-- Background Gradient -->
+<div class="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
+<div class="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-gradient-to-br from-[#ff0080]/30 to-[#ff8c00]/30 rounded-full blur-3xl opacity-50"></div>
+<div class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-[#0df2df]/20 to-[#007cf0]/20 rounded-full blur-3xl opacity-40"></div>
+</div>
+<div class="layout-container flex h-full grow flex-col z-10">
+<!-- TopNavBar Component -->
+<div class="px-4 sm:px-10 md:px-20 lg:px-40 flex justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-[1200px]">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#224946] px-6 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Code Me Baby</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end items-center gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Matches</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Messages</a>
+<a class="text-white text-sm font-bold leading-normal border-b-2 border-primary pb-1" href="#">Pair-Programming</a>
+</div>
+<div class="flex gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#224946] hover:bg-[#2a5a56] text-white/80 hover:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 transition-colors">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#224946] hover:bg-[#2a5a56] text-white/80 hover:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 transition-colors">
+<span class="material-symbols-outlined text-xl">settings</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#224946]" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA2QEwV0jTAGLr29RImRuNO2llxCCZDj9dHqiAmWGzoMZK9nFmLsAFqyY5oeVXuOWpPDN_0EKdmTD7dCvIGgNs2US3j0pmC0hqw-xNEy36_H2gs10xK5DZiIwiEbyAqVB2alj4PBHg8FF1_A_adNlCJf7or53pv5Z99myC3N13H9zg2ByB0JuJlnzEd6YhsKPLXgajoFtU1tGd59RwD6cjYX_g2Lw9rIAkJCPk8z9NEWCZ--1WL_7APM1Vnkz_XpWhqS4rKqFXOxw");'></div>
+</div>
+<button class="md:hidden flex items-center justify-center size-10 rounded-full bg-[#224946] text-white">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</header>
+</div>
+</div>
+<!-- Main Content -->
+<main class="px-4 sm:px-10 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1 items-center">
+<!-- AvatarGroup Component -->
+<div class="flex items-center justify-center py-6">
+<div class="flex items-center">
+<div class="overflow-visible w-auto -mr-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover border-[#102321] rounded-full flex items-center justify-center size-16 border-4" data-alt="Current user's avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoY3YTIet2mCyup-McHhKT_8RHJeRuTG1sNSP2AdPyUBA3LOxF2gyHseqzGshU4IqZJ5_tl2IVh32EqyCHNrVdZx0WxpiLhMU2cYF9FkKvRimHUi38o66u2mZ5lm-B3lkZuQKgxSl-7ElrBu4zubZU7afmkS3OSxoDc10coKd8FZsV9myxO50_DnumLYgZ576AX63ACc8KEA3p_9C7aYcNGGxuvat8mrHwJjWTnKsk2GaiKHx0dxXymJZ2qAtvg1AMsUGhSKXMFw");'></div>
+</div>
+<div class="overflow-visible w-auto">
+<div class="bg-center bg-no-repeat aspect-square bg-cover border-[#102321] rounded-full flex items-center justify-center size-16 border-4" data-alt="Matched user's avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhbCN8KSMqjLVd5IvNl-AONEWd0P3_PPsXGbMGcsuMcV5sGg1MZR9PF0Hn0jOFqPGV_eBWXl07hb697DIfGKhflb4LgtkmH3lgL21WGRSmqpL9W7Hd-qaeVOj7RoSYWrGEs3-_yJcWRPy27Xc6dLmklPPQHrVlVbx2fgM0L8kbI35ahsiBO7plB0i0cbocC6CtkjOesmw70OJV48AV3RlNdxdFusuqa0Bb9Fzx6teAvKGvBmZ4aUqL3ur-vdxfv4JmvjSXhO0JAQ");'></div>
+</div>
+</div>
+</div>
+<!-- HeadlineText Component -->
+<h1 class="text-white tracking-tight text-[32px] sm:text-4xl font-bold leading-tight px-4 text-center pb-2 pt-2 font-mono">Schedule Your Pair-Programming Date</h1>
+<!-- BodyText Component -->
+<p class="text-white/80 text-base font-normal leading-normal pb-8 pt-1 px-4 text-center max-w-lg">Select a date and time to send an invite to Jessica, or start a session right now.</p>
+<!-- Scheduling Module -->
+<div class="w-full max-w-4xl bg-[#1a3a37]/50 border border-[#224946] rounded-lg p-4 sm:p-8 flex flex-col lg:flex-row gap-8 backdrop-blur-sm">
+<!-- CalendarPicker Component -->
+<div class="flex flex-1 flex-col gap-0.5">
+<div class="flex items-center p-1 justify-between">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-white/10 text-white/80 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<p class="text-white text-base font-bold leading-tight flex-1 text-center">December 2024</p>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-white/10 text-white/80 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-1">
+<p class="text-white/60 text-[13px] font-bold leading-normal flex h-10 w-full items-center justify-center">S</p>
+<p class="text-white/60 text-[13px] font-bold leading-normal flex h-10 w-full items-center justify-center">M</p>
+<p class="text-white/60 text-[13px] font-bold leading-normal flex h-10 w-full items-center justify-center">T</p>
+<p class="text-white/60 text-[13px] font-bold leading-normal flex h-10 w-full items-center justify-center">W</p>
+<p class="text-white/60 text-[13px] font-bold leading-normal flex h-10 w-full items-center justify-center">T</p>
+<p class="text-white/60 text-[13px] font-bold leading-normal flex h-10 w-full items-center justify-center">F</p>
+<p class="text-white/60 text-[13px] font-bold leading-normal flex h-10 w-full items-center justify-center">S</p>
+<!-- Calendar Days -->
+<button class="h-10 w-full text-white/40 col-start-1 text-sm font-medium leading-normal cursor-not-allowed">24</button>
+<button class="h-10 w-full text-white/40 text-sm font-medium leading-normal cursor-not-allowed">25</button>
+<button class="h-10 w-full text-white/40 text-sm font-medium leading-normal cursor-not-allowed">26</button>
+<button class="h-10 w-full text-white/40 text-sm font-medium leading-normal cursor-not-allowed">27</button>
+<button class="h-10 w-full text-white/40 text-sm font-medium leading-normal cursor-not-allowed">28</button>
+<button class="h-10 w-full text-white/40 text-sm font-medium leading-normal cursor-not-allowed">29</button>
+<button class="h-10 w-full text-white/40 text-sm font-medium leading-normal cursor-not-allowed">30</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">1</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">2</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">3</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">4</button>
+<button class="h-10 w-full text-[#102321] text-sm font-bold leading-normal rounded-full bg-primary">5</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">6</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">7</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">8</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">9</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">10</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">11</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">12</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">13</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">14</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">15</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">16</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">17</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">18</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">19</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">20</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">21</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">22</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">23</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">24</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">25</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">26</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">27</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">28</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">29</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">30</button>
+<button class="h-10 w-full text-white text-sm font-medium leading-normal rounded-full hover:bg-white/10 transition-colors">31</button>
+</div>
+</div>
+<!-- Time Slot Selector -->
+<div class="flex flex-col lg:w-64 lg:border-l lg:border-[#224946] lg:pl-8">
+<h3 class="text-base font-bold text-white mb-4 text-center lg:text-left">Available Times (PST)</h3>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-2">
+<button class="py-2 px-4 rounded bg-[#224946] text-white/80 hover:bg-primary/20 hover:text-white transition-colors text-sm">09:00 AM</button>
+<button class="py-2 px-4 rounded bg-[#224946] text-white/80 hover:bg-primary/20 hover:text-white transition-colors text-sm">09:30 AM</button>
+<button class="py-2 px-4 rounded bg-[#224946] text-white/80 hover:bg-primary/20 hover:text-white transition-colors text-sm">10:00 AM</button>
+<button class="py-2 px-4 rounded bg-primary text-[#102321] font-bold text-sm">10:30 AM</button>
+<button class="py-2 px-4 rounded bg-[#224946] text-white/80 hover:bg-primary/20 hover:text-white transition-colors text-sm">11:00 AM</button>
+<button class="py-2 px-4 rounded bg-[#224946] text-white/80 hover:bg-primary/20 hover:text-white transition-colors text-sm">11:30 AM</button>
+<button class="py-2 px-4 rounded bg-[#224946] text-white/80 hover:bg-primary/20 hover:text-white transition-colors text-sm">01:00 PM</button>
+<button class="py-2 px-4 rounded bg-[#224946] text-white/80 hover:bg-primary/20 hover:text-white transition-colors text-sm">01:30 PM</button>
+</div>
+<button class="w-full mt-6 py-3 rounded-lg bg-primary text-[#102321] font-bold text-sm leading-normal tracking-wide hover:bg-[#00d9c6] transition-colors">Propose Session</button>
+</div>
+</div>
+<!-- Divider -->
+<div class="flex items-center w-full max-w-sm my-8">
+<div class="flex-grow h-px bg-[#224946]"></div>
+<span class="px-4 text-sm text-white/60">OR</span>
+<div class="flex-grow h-px bg-[#224946]"></div>
+</div>
+<!-- Instant Session CTA -->
+<div class="w-full flex justify-center">
+<button class="relative group w-full max-w-md flex items-center justify-center gap-3 px-8 py-4 rounded-lg bg-white/10 border border-primary text-primary font-bold text-lg tracking-wider overflow-hidden hover:text-[#102321] transition-all duration-300">
+<span class="absolute inset-0 bg-primary w-0 group-hover:w-full transition-all duration-300 ease-out"></span>
+<span class="material-symbols-outlined relative">play_circle</span>
+<span class="relative">Start Coding Now</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

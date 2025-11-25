@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Code Me Baby - Discover</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0df2df",
+              "background-light": "#f5f8f8",
+              "background-dark": "#102221",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 dark:border-b-[#224946] px-4 md:px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Code Me Baby</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-primary text-sm font-bold leading-normal" href="#">Discover</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Matches</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Profile</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Settings</a>
+</div>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-white/10 dark:bg-[#224946] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined text-white text-xl">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBC02k3aOHjEBUTtXXi_BpcBXgrvUIMve3wT4lorxwM4C3x8RH7vs_6ZMbEB_QURlF2Jss2-Y3gDfuV6rcD-sVcSKJHA6mXaqbyoZnDgxL1x8QhRzCglUgJMbgl9NGw1TDfxF_l4mFpv6r4cDt3QUpWh2XdgtP7G7OX5Dm5ghHrlTTlYUoUpaE3BrWWCxiy7A1rCVIJjP2ST-ZBgIn6YA8wqxsPvQGvebozBfHhGj7UEfzKE3XV9u_kYLUAKfDsaxvYKjnhiJBGbg");'></div>
+</div>
+</header>
+<main class="flex flex-col gap-6 mt-6">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Discover New Developers</p>
+<p class="text-white/70 dark:text-[#90cbc6] text-base font-normal leading-normal">Find your pair-programming partner for life.</p>
+</div>
+</div>
+<!-- Chips -->
+<div class="flex gap-3 p-3 overflow-x-auto">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/10 dark:bg-[#224946] pl-3 pr-3 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-white text-xl">code</span>
+<p class="text-white text-sm font-medium leading-normal">Tech Stack</p>
+<span class="material-symbols-outlined text-white text-xl">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/10 dark:bg-[#224946] pl-3 pr-3 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-white text-xl">bar_chart</span>
+<p class="text-white text-sm font-medium leading-normal">Experience Level</p>
+<span class="material-symbols-outlined text-white text-xl">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/10 dark:bg-[#224946] pl-3 pr-3 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-white text-xl">location_on</span>
+<p class="text-white text-sm font-medium leading-normal">Location</p>
+<span class="material-symbols-outlined text-white text-xl">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/10 dark:bg-[#224946] pl-3 pr-3 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-white text-xl">work</span>
+<p class="text-white text-sm font-medium leading-normal">Role</p>
+<span class="material-symbols-outlined text-white text-xl">expand_more</span>
+</button>
+</div>
+<!-- Profile Card Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+<!-- Profile Card 1 -->
+<div class="flex flex-col bg-[#282a36] rounded-lg overflow-hidden border border-white/10 hover:border-primary transition-all duration-300 transform hover:-translate-y-1">
+<div class="bg-cover bg-center h-64" data-alt="Profile photo of Alex, a developer smiling." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBK49HcxuVRKYGW6nJNkoL-pOGfLGST5eLS5P4_xPDyYy8uIVEKSdQMeLLsDKU1UhsHbwmgyD059AH9li_nS3KlMzpeBJoqfWuJwR0vhvbKNJRaaaX-OIY7jFHLl6pdMhsuDSAHva19YVxVp0xF-gX7-HtjIUCgqlYr1G7l4IggQtuE4bgOlI_JrvAs4MJ6sazcp8_D-hCNiBOtZjrxhpLNFIxTj-onHLVo_mtK6vF9sWBWYKe_i_lxEODTCvlVM9OsTtV09rl5Uw');"></div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="text-xl font-bold text-white mb-2">const name = "Alex"</h3>
+<p class="text-sm text-white/60 mb-4 font-mono">// Seeking a partner for pair-programming life's bugs.</p>
+<div class="text-sm font-mono space-y-1 text-white/90 flex-grow">
+<p><span class="text-[#ff79c6]">tech_stack:</span> <span class="text-[#f1fa8c]">['React', 'Node.js', 'Python']</span>,</p>
+<p><span class="text-[#ff79c6]">side_project:</span> <span class="text-[#f1fa8c]">'AI-powered rubber duck'</span>,</p>
+</div>
+<div class="mt-6 flex gap-4">
+<button class="flex-1 flex items-center justify-center gap-2 rounded-full h-10 bg-red-500/20 text-red-400 hover:bg-red-500/30 transition-colors text-sm font-bold">
+<span class="material-symbols-outlined">close</span>
+<span>close</span>
+</button>
+<button class="group flex-1 flex items-center justify-center gap-2 rounded-full h-10 bg-primary/20 text-primary hover:bg-primary/30 transition-colors text-sm font-bold">
+<span>merge</span>
+<span class="material-symbols-outlined text-base group-hover:text-[#FF79C6] transition-colors">favorite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Profile Card 2 -->
+<div class="flex flex-col bg-[#282a36] rounded-lg overflow-hidden border border-white/10 hover:border-primary transition-all duration-300 transform hover:-translate-y-1">
+<div class="bg-cover bg-center h-64" data-alt="Profile photo of Jordan, a developer at a coffee shop." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBc51h1wSjhKx8fBtABWVoPOFzj4_pwqGBF0moC7EgxqqStEdlrSSnO8RQRkWX1j3oIqusmq-xNevV3N9naG5mmzuw7owjcHUSYr4BN67kSjXdrJmcM6El7lBy3CQrQp6_g_RuObOS7Jo8daQFWj5Rt81l1kbkU1ox52Xln05ncCQ9C2sS_LHxI3RzYwSuJ81ZRyCl5JjLzXyNyOaLCAX_5iLILwFMERxgxDrbxS71OVbmZ_fGvyoN4ZvL5xTN_g9apdNGjPkL9wQ');"></div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="text-xl font-bold text-white mb-2">const name = "Jordan"</h3>
+<p class="text-sm text-white/60 mb-4 font-mono">// Compiling my thoughts on finding the one.</p>
+<div class="text-sm font-mono space-y-1 text-white/90 flex-grow">
+<p><span class="text-[#ff79c6]">tech_stack:</span> <span class="text-[#f1fa8c]">['Vue', 'GraphQL', 'Go']</span>,</p>
+<p><span class="text-[#ff79c6]">side_project:</span> <span class="text-[#f1fa8c]">'A smart plant watering system'</span>,</p>
+</div>
+<div class="mt-6 flex gap-4">
+<button class="flex-1 flex items-center justify-center gap-2 rounded-full h-10 bg-red-500/20 text-red-400 hover:bg-red-500/30 transition-colors text-sm font-bold">
+<span class="material-symbols-outlined">close</span>
+<span>close</span>
+</button>
+<button class="group flex-1 flex items-center justify-center gap-2 rounded-full h-10 bg-primary/20 text-primary hover:bg-primary/30 transition-colors text-sm font-bold">
+<span>merge</span>
+<span class="material-symbols-outlined text-base group-hover:text-[#FF79C6] transition-colors">favorite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Profile Card 3 -->
+<div class="flex flex-col bg-[#282a36] rounded-lg overflow-hidden border border-white/10 hover:border-primary transition-all duration-300 transform hover:-translate-y-1">
+<div class="bg-cover bg-center h-64" data-alt="Profile photo of Taylor, a developer working on a laptop." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcOHjCoKfQbFRGkjSiTTJV2LeBdVmt6X3aUSwW1nP18C1GuXQJBaR0KQpYYnj1Tov1OiMrJHYpjcRw0EtbknKc9Q0KzosgYaMsXDetCRqmRHLr-ynGGh3zfGdCVD30_5xqw8u-Aq1z4vOcJ5TQ_dMt8Vdc1PpoFWvW8_7yqYFBj24zT6AE4XxoMCPNShTVtsXQGK0ZzNZlI29yDw_m0h8E2a94PPTgGCG5Nal2D5i10OyQplujmNqWN--yyeOO8wBzsJRhdxMWIA');"></div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="text-xl font-bold text-white mb-2">const name = "Taylor"</h3>
+<p class="text-sm text-white/60 mb-4 font-mono">// Let's resolve our merge conflicts.</p>
+<div class="text-sm font-mono space-y-1 text-white/90 flex-grow">
+<p><span class="text-[#ff79c6]">tech_stack:</span> <span class="text-[#f1fa8c]">['Angular', 'Firebase', 'Java']</span>,</p>
+<p><span class="text-[#ff79c6]">side_project:</span> <span class="text-[#f1fa8c]">'A pixel art generator'</span>,</p>
+</div>
+<div class="mt-6 flex gap-4">
+<button class="flex-1 flex items-center justify-center gap-2 rounded-full h-10 bg-red-500/20 text-red-400 hover:bg-red-500/30 transition-colors text-sm font-bold">
+<span class="material-symbols-outlined">close</span>
+<span>close</span>
+</button>
+<button class="group flex-1 flex items-center justify-center gap-2 rounded-full h-10 bg-primary/20 text-primary hover:bg-primary/30 transition-colors text-sm font-bold">
+<span>merge</span>
+<span class="material-symbols-outlined text-base group-hover:text-[#FF79C6] transition-colors">favorite</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- EmptyState (example for when no more profiles are available) -->
+<div class="flex flex-col px-4 py-12">
+<div class="flex flex-col items-center gap-6">
+<div class="text-primary text-6xl">
+<span class="material-symbols-outlined" style="font-size: 6rem;">search_off</span>
+</div>
+<div class="flex max-w-[480px] flex-col items-center gap-2">
+<p class="text-white text-lg font-bold leading-tight tracking-[-0.015em] max-w-[480px] text-center font-mono">// 404: Matches not found</p>
+<p class="text-white/70 dark:text-white/60 text-sm font-normal leading-normal max-w-[480px] text-center">
+                                        There are no more profiles to show. Try adjusting your filters or check back later for new developers!
+                                    </p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Adjust Filters</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>

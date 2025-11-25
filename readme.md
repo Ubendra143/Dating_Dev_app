@@ -5,12 +5,3 @@
 | Matching & Discovery      | Browse / Match Cards  | As a user, I want to browse potential matches as cards so I can choose whom to like or skip.                  | High         | - Cards show name, languages, photo<br>- “Like” and “Pass” buttons visible<br>- Swipe or click to navigate         | **8**                |
 | Pair-Programming Sessions | Scheduling / Calendar | As a matched user, I want to pick available time slots so we can schedule a pair-programming session.         | Medium       | - Show free/busy slots<br>- Allow selection of up to 3 slots<br>- Confirmation before scheduling                   | **5**                |
 | Match Celebration         | Match Animation       | As a user, when I get a match, I want to see a “Compiling … <3” animation so the match feels playful and fun. | Low          | - Show “Compiling … <3” text<br>- Progress bar fills in ~2 seconds<br>- Confetti/hearts animation after completion | **2**                |
-
-### Use Cases (DHE-6 & DHE-10)
-DHE-6 focuses on letting matched devs propose up to three pair-programming slots pulled from their synced calendars so coordination stays async-friendly.
-Slot cards show timezone-adjusted start/end times and highlight mutual availability before the user confirms.
-Success for DHE-6 is a confirmation toast plus a scheduled session stub that both devs can reopen or reschedule.
-DHE-10 brings the “Compiling … <3” celebration to life immediately after both users like each other.
-The animation posts progressive build states for ~2 seconds, then fires confetti/hearts to signal mutual interest.
-It also surfaces a CTA to jump into scheduling, tying the celebration back into the DHE-6 flow.
-Together these use cases turn a match into momentum by celebrating the win and funneling users into session planning.
