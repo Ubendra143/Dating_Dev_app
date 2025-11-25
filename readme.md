@@ -1,69 +1,16 @@
-Epic
+| **Epic**                  | **Feature**           | **User Story**                                                                                                | **Priority** | **Acceptance Criteria**                                                                                            | **Fibonacci Points** |
+| ------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------ | -------------------- |
+| Onboarding & Profile      | Sign-Up / Login       | As a new user, I want to sign up with my email & password so that I can create a Code Me Baby account.        | High         | - Email must be valid<br>- Password minimum 8 characters<br>- On success, redirect to onboarding                   | **5**                |
+| Onboarding & Profile      | Profile Setup         | As a user, I want to upload a profile photo so that other coders can see who I am.                            | Medium       | - Only .jpg/.png formats<br>- Max file size 5 MB<br>- Show preview after upload                                    | **3**                |
+| Matching & Discovery      | Browse / Match Cards  | As a user, I want to browse potential matches as cards so I can choose whom to like or skip.                  | High         | - Cards show name, languages, photo<br>- “Like” and “Pass” buttons visible<br>- Swipe or click to navigate         | **8**                |
+| Pair-Programming Sessions | Scheduling / Calendar | As a matched user, I want to pick available time slots so we can schedule a pair-programming session.         | Medium       | - Show free/busy slots<br>- Allow selection of up to 3 slots<br>- Confirmation before scheduling                   | **5**                |
+| Match Celebration         | Match Animation       | As a user, when I get a match, I want to see a “Compiling … <3” animation so the match feels playful and fun. | Low          | - Show “Compiling … <3” text<br>- Progress bar fills in ~2 seconds<br>- Confetti/hearts animation after completion | **2**                |
 
-Feature
-
-User Story
-
-Priority
-
-Acceptance Criteria
-
-Onboarding & Profile
-
-Sign-Up / Login
-
-As a new user, I want to sign up with my email & password so that I can create a Code Me Baby account.
-
-High
-
-- Email must be valid 
-- Password minimum 8 characters 
-- On success, redirect to onboarding
-
-Onboarding & Profile
-
-Profile Setup
-
-As a user, I want to upload a profile photo so that other coders can see who I am.
-
-Medium
-
-- Only image formats .jpg/.png accepted 
-- Max file size 5 MB 
-- Show preview after upload
-
-Matching & Discovery
-
-Browse / Match Cards
-
-As a user, I want to browse potential matches as cards so I can choose whom to like or skip.
-
-High
-
-- Cards show name, languages, photo 
-- “Like” and “Pass” buttons visible 
-- Swipe or click to navigate
-
-Pair‑Programming Sessions
-
-Scheduling / Calendar
-
-As a matched user, I want to pick available time slots so we can schedule a pair-programming session.
-
-Medium
-
-- Show free/busy slots 
-- Allow to pick up to 3 slots 
-- Confirmation screen before scheduling
-
-Match Celebration
-
-Match Animation
-
-As a user, when I get a match, I want to see a “Compiling … <3” animation so the match feels playful and fun.
-
-Low
-
-- Show “Compiling … <3” text 
-- Animated progress bar fills in ~2 seconds 
-- Confetti or hearts animation once done
+### Use Cases (DHE-6 & DHE-10)
+DHE-6 focuses on letting matched devs propose up to three pair-programming slots pulled from their synced calendars so coordination stays async-friendly.
+Slot cards show timezone-adjusted start/end times and highlight mutual availability before the user confirms.
+Success for DHE-6 is a confirmation toast plus a scheduled session stub that both devs can reopen or reschedule.
+DHE-10 brings the “Compiling … <3” celebration to life immediately after both users like each other.
+The animation posts progressive build states for ~2 seconds, then fires confetti/hearts to signal mutual interest.
+It also surfaces a CTA to jump into scheduling, tying the celebration back into the DHE-6 flow.
+Together these use cases turn a match into momentum by celebrating the win and funneling users into session planning.
